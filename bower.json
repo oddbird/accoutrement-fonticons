@@ -1,0 +1,23 @@
+{
+  "name": "accoutrement-icons",
+  "version": "1.0.0",
+  "homepage": "https://github.com/oddbird/accoutrement-icons",
+  "authors": [
+    "Eric M. Suzanne"
+  ],
+  "description": "Icon hepers",
+  "main": "sass/_icons.scss",
+  "keywords": [
+    "sass",
+    "css",
+    "accoutrement"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

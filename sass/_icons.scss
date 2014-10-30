@@ -1,0 +1,73 @@
+// Icon Toolkit
+// ============
+
+$icon-font: 'icons';
+$icons: ();
+
+
+// Icon
+// ----
+@mixin icon(
+  $name,
+  $location: before
+) {
+  &::#{$location} {
+    @extend %icon;
+    content: icon($name);
+    @content;
+  }
+}
+
+
+// Icon [function]
+// ---------------
+@function icon($icon) {
+  $icon: map-get($icons, $icon) or $icon;
+
+  @if map-has-key($icons, $icon) {
+    $icon: icon($icon);
+  }
+
+  @return $icon;
+}
+
+
+// Data Icons
+// ----------
+@mixin data-icons(
+  $map: $icons
+) {
+  @each $name, $value in $map {
+    @if map-has-key($icons, $value) {
+      $value: icon($value);
+    }
+    [data-icon='#{$name}']:before { content: '#{$value}'; }
+  }
+}
+
+
+// Placeholders
+// ------------
+
+@mixin icon-placeholder(
+  $name: $icon-font
+) {
+  %icon {
+    font-family: $name;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: none;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  [data-icon] {
+    @extend %icon;
+    @include before(attr(data-icon));
+  }
+}
