@@ -1,12 +1,12 @@
 {
-  "name": "accoutrement-icons",
+  "name": "accoutrement-fonticons",
   "version": "1.0.0",
-  "homepage": "https://github.com/oddbird/accoutrement-icons",
+  "homepage": "https://github.com/oddbird/accoutrement-fonticons",
   "authors": [
     "Eric M. Suzanne"
   ],
-  "description": "Icon hepers",
-  "main": "sass/_icons.scss",
+  "description": "FontIcon hepers",
+  "main": "sass/_fonticons.scss",
   "keywords": [
     "sass",
     "css",

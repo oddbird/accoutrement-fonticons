@@ -1,8 +1,8 @@
-accoutrement-icons
-==================
+accoutrement-fonticons
+======================
 
-Icon helpers
+FontIcon helpers
 
 ## Installation
 
-``bower install accoutrement-icons``
+``bower install accoutrement-fonticons``
