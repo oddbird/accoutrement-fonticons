@@ -1,6 +1,7 @@
 // Icon Toolkit
 // ============
 
+
 $icon-font: 'icons';
 $icons: ();
 
@@ -48,7 +49,6 @@ $icons: ();
 
 // Placeholders
 // ------------
-
 @mixin icon-placeholder(
   $name: $icon-font
 ) {
